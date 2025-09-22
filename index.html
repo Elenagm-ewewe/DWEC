@@ -105,8 +105,56 @@ console.log(aplica_funcion(5,cubo));
 
 //Funciones anónimas
 
-//  
+/* let holamundo = function(){ 
+    alert("Hola mundo");
+} */
 
+function holamundo(){
+    alert("Hola mundo");
+}
+
+holamundo();
+
+//Función flecha (arrow function)
+//sin flecha:
+        function potencia(base, exponente){
+            console.log(base);
+            console.log(exponente);
+
+            let valor = 1;
+
+            for(let i = 1 ; i<= exponente;i++){
+                valor = valor * base;
+            }
+            return valor;
+
+        }
+//con flecha:
+
+let potencia = (base, exponente) => {
+    let valor = 1;
+     for(let i = 1 ; i<= exponente;i++){
+                valor = valor * base;
+            }
+}
+
+//Al escribir con la sintaxi de la funcion flecha tenemos:
+
+//1. Eliminar la palara function
+//2. Si solo tenemos 1 parametro se elimina parentesis
+//3. Ponemos simbolo =>
+// 4. Si la fn solo iene 1 linea podemos eliminar {} y el return
+
+
+let cuadrado1 = function (base){
+    return base * base;
+}
+
+//la funcion arrow seria asi:
+
+let cuadrado2 = base=> base * base;
+
+console.log(cuadrado2(8));
 
     </script>
     
