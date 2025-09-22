@@ -61,6 +61,7 @@
         function potencia(base, exponente){
             console.log(base);
             console.log(exponente);
+
             let valor = 1;
 
             for(let i = 1 ; i<= exponente;i++){
@@ -73,8 +74,38 @@
         console.log(potencia(4,2));
 
 
-
+function suma(){
+    let resultado = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        resultado += arguments[i];
         
+    }
+    return resultado;
+}
+
+console.log(suma(10,12,14));
+
+/* Las fn son un tipo de datos x lo que podemos hacer cosas como pasarlas por argumento o asignarlas una variable*/
+
+const cuadrado = function(value){
+    return value * value
+}
+
+const cubo = function(value){
+    return value * value * value;
+}
+
+function aplica_funcion(dato, funcion_a_aplicar){
+return funcion_a_aplicar(dato);
+}
+
+console.log(aplica_funcion(5,cuadrado));
+console.log(aplica_funcion(5,cubo));
+
+
+//Funciones anónimas
+
+//  
 
 
     </script>
