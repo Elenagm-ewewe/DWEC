@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esto</title>
+</head>
+<body>
+
+
+    
+    <script>
+
+        //Variables
+
+        let miVariable;
+        miVariable = "Hola";
+        miVariable = 45;
+        miVariable=[12, 5, 8, 9, 23];
+        miVariable = undefined;
+        miVariable = "56";
+
+
+        console.log(miVariable);
+
+        var alvarito;
+        alvarito = "esto";
+
+        console.log(alvarito);
+
+        edad = 15;
+        if(edad > 18){
+            let textoLet = "Eres mayor de edad";
+            console.log(textoLet);
+        }else{
+            let textoLet = "Eres menor de edad";
+            console.log(textoLet);
+        }
+
+
+        if(edad > 18){
+            var textoLet = "Eres mayor de edad";
+        }else{
+            var textoLet = "Eres menor de edad";
+        }
+
+        console.log(textoLet);
+
+
+        const a = 3.141592;
+
+        console.log(a);
+
+        const e =[4,6,1];
+        e[1] = 5;
+        console.log(e);
+        
+
+        //Funciones
+
+        function potencia(base, exponente){
+            console.log(base);
+            console.log(exponente);
+            let valor = 1;
+
+            for(let i = 1 ; i<= exponente;i++){
+                valor = valor * base;
+            }
+            return valor;
+
+        }
+
+        console.log(potencia(4,2));
+
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
