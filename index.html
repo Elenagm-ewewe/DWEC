@@ -109,11 +109,11 @@ console.log(aplica_funcion(5,cubo));
     alert("Hola mundo");
 } */
 
-function holamundo(){
+/* function holamundo(){
     alert("Hola mundo");
-}
+} */
 
-holamundo();
+/* holamundo(); */
 
 //Función flecha (arrow function)
 //sin flecha:
@@ -131,7 +131,7 @@ holamundo();
         }
 //con flecha:
 
-let potencia = (base, exponente) => {
+let potencia1 = (base, exponente) => {
     let valor = 1;
      for(let i = 1 ; i<= exponente;i++){
                 valor = valor * base;
@@ -143,7 +143,7 @@ let potencia = (base, exponente) => {
 //1. Eliminar la palara function
 //2. Si solo tenemos 1 parametro se elimina parentesis
 //3. Ponemos simbolo =>
-// 4. Si la fn solo iene 1 linea podemos eliminar {} y el return
+//4. Si la fn solo iene 1 linea podemos eliminar {} y el return
 
 
 let cuadrado1 = function (base){
@@ -154,7 +154,136 @@ let cuadrado1 = function (base){
 
 let cuadrado2 = base=> base * base;
 
+//Escructuras y bucles:
+
+
+//If/ else
+edad = 70;
+
 console.log(cuadrado2(8));
+
+if(edad <= 18){
+    console.log("Es mayor de edad");
+}else if ( edad >= 65){
+    console.log("Eres un abuelete");
+}else{
+    console.log("Eres un enano");
+}
+
+
+let esMayordeEdad = (edad>=18) ? true:false;
+console.log(esMayordeEdad);
+
+
+//Switch
+
+color = "blanco";
+let colordefondo;
+
+switch (color) {
+    case "blanco":
+        colordefondo = 1;
+        break;
+
+    case "negro":
+        colordefondo = 2;
+    break;
+    case "azul":
+        colordefondo = 3;
+    break;
+
+    default:
+        break;
+}
+
+let age =  15;
+
+switch(true){
+    case age <18:
+        console.log("Eres muy joven para entrar en una discoteca")
+        break;
+
+    case age >65:
+        console.log("Eres muy mayor para entrar en una discoteca")
+        break;
+
+
+    default:
+        console.log("Eres normal");
+        break;
+}
+
+
+//While
+/* 
+let nota = prompt("Introduce una nota:");
+
+while(nota){
+    console.log("La nota indroducida es: " + nota);
+    nota = prompt("Introduce otra nota");
+}
+ */
+
+do {
+    console.log("Soy mayor de " + age + " y entro");
+} while (edad < 30);
+
+
+//Bucle for
+
+/* let datos= [2,4,6];
+let sumadatos = 0;
+
+for (let i = 0; i < datos.length; i++) {
+    sumadatos += datos[i];
+}
+
+console.log(sumadatos); */
+
+//Bucle for in
+
+let datos= [2,4,6];
+let sumadatos = 0;
+
+for(let i in datos){
+    sumadatos += datos[i];
+}
+
+console.log(sumadatos);
+
+let persona = {
+    nombre:"Maricon",
+    apellido:"Alvaro",
+    apellido2: "Jurado"
+
+}
+
+let nombre = "";
+
+for (let o in persona) {
+    nombre += persona[o] + " ";  
+}
+
+console.log(nombre)
+
+
+//Bucle for of
+
+let datos1 = [7,8,9,10];
+let sumadatos1 = 0;
+
+for(let valor of datos1){
+    sumadatos1 += valor;
+}
+
+console.log(sumadatos1);
+
+let cadena = "Hola";
+
+for(let letra of cadena){
+    console.log(letra);
+}
+
 
     </script>
     
