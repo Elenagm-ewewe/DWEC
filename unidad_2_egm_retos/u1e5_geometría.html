@@ -9,13 +9,11 @@
 <script>
 
     function calcularCirculo(){
-        let radioEntrada = document.getElementById("radio");
+        let radioEntrada = parseFloat(document.getElementById("radio").value);
         let salidaCirculo = document.getElementById("areacirculo");
 
-        let radio = parseFloat(radioEntrada.value);
-
-        let area = calcularAreaCirculo(radio);
-        let perimetro = calcularPerimetroCirculo(radio);
+        let area = calcularAreaCirculo(radioEntrada);
+        let perimetro = calcularPerimetroCirculo(radioEntrada);
 
         salidaCirculo.innerHTML = "El área del círculo es: " + area + "<br>El perímetro del círculo es " + perimetro ;
     };
