@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Reto 2. Unidad 2</title>
+</head>
+
+<!--El programa pretende imprimir en el documeno HTML la tabla de multiplicar del númetro introducido por el usuario-->
+
+<body>
+
+    <!--Para ello necesitamos un id que le indique a javascript dónde se debe imprimir la tabla de multiplicar.
+    En este caso se imprimirá en un párrafo con un id "tabla"-->
+    <p id="tabla"></p> 
+
+    <!--Esta etiqueta se tiene que poner antes del <script>, de otro modo el elemento "tabla" no existiría al leer el código-->
+
+<script>
+
+    let y = prompt('INTRODUZCA NÚMERO');
+
+    y = parseInt(y);
+
+
+    //Creamos la variable que se imprimirá en el id "tabla"
+    let tablamultiplicar = document.getElementById("tabla");
+
+    let m = 1; //Creamos una variable auxiliar que nos  haga de multiplicador y vaya aumentando dentro del bucle, ya que la variable x del FOR no nos sirve por algun motivo que desconozco
+
+    for (let x = 1 ; x <= 10; x++) {  //Quitamos los ;, si lo dejamos el bucle solo se repetirá una vez
+        let r = 0; //Reiniciamos la variable r para que no se acumule.
+        r = y * m;  
+        tablamultiplicar.innerHTML += y + "x" + m + "=" + r + "<br>"; //Sobreescribimos en el objeto con el id "tabla" el string resultante de formar la multiplicación.
+        //Tenemos que usar .innerHTML en vez de .textContent porque este ultimo no lee caracteres especiales ni etiquetas como "<b>"
+        m++; //Aumentamos el valor de m en 1;
+    }
+
+</script>
+
+</body>
+</html>
+

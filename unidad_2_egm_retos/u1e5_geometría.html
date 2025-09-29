@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="u1e5_geometría.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 5. Unidad 2</title>
+
+<script>
+
+    function calcularCirculo(){
+        let radioEntrada = document.getElementById("radio");
+        let salidaCirculo = document.getElementById("areacirculo");
+
+        let radio1 = parseFloat(radioEntrada.value);
+
+        let area = calcularAreaCirculo(radio1);
+        let perimetro = calcularPerimetroCirculo(radio1);
+
+        salidaCirculo.innerHTML = "El área del círculo es: " + area + "<br>El perímetro del círculo es " + perimetro ;
+    };
+
+    document.addEventListener("DOMContentLoaded",function(){
+        const boton = document.getElementById("calculararea");
+
+        if(boton){
+            boton.addEventListener("click", calcularCirculo);
+        }
+
+    });
+
+
+</script>
+
+</head>
+<body>
+
+    <h2>Círculo</h2>
+    <p>Radio</p>
+    <input type="text" id="radio">
+    <button id = "calculararea">Calcular área y perímetro</button>
+    <p id="areacirculo"></p>
+
+    <h2>Cuadrado</h2>
+    <p>Lado</p>
+    <input type="text" id="lado">
+
+
+
+    <h2>Rectángulo</h2>
+    <p>Base</p>
+    <input type="text" id="base">
+    <p>Altura</p>
+    <input type="text" id="altura">
+
+    <h2>Triángulo equilátero</h2>
+    <p>Base</p>
+    <input type="text" id="lado">
+
+    <h2>Triángulo isósceles</h2>
+    <p>Base</p>
+
+    <h2>Triángulo escaleno</h2>
+    
+</body>
+</html>
