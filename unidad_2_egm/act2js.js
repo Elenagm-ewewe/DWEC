@@ -1,8 +1,5 @@
 function calcularsalario(horas, precio){
 
-    horas = parseFloat(horas);
-    precio = parseFloat(precio);
-
     let pago;
 
     if(horas<=35){
@@ -32,6 +29,6 @@ return result
 let horas = prompt("Introduce el número de horas");
 let precio =prompt("Introduce el precio de cada hora");
 
-let total = calcularsalario(horas,precio)
+let total = calcularsalario(horas,precio);
 
 alert("El salario calculado es de " + total);

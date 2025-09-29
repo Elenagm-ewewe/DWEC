@@ -12,10 +12,10 @@
         let radioEntrada = document.getElementById("radio");
         let salidaCirculo = document.getElementById("areacirculo");
 
-        let radio1 = parseFloat(radioEntrada.value);
+        let radio = parseFloat(radioEntrada.value);
 
-        let area = calcularAreaCirculo(radio1);
-        let perimetro = calcularPerimetroCirculo(radio1);
+        let area = calcularAreaCirculo(radio);
+        let perimetro = calcularPerimetroCirculo(radio);
 
         salidaCirculo.innerHTML = "El área del círculo es: " + area + "<br>El perímetro del círculo es " + perimetro ;
     };
@@ -26,7 +26,6 @@
         if(boton){
             boton.addEventListener("click", calcularCirculo);
         }
-
     });
 
 

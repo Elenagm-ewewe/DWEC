@@ -14,9 +14,7 @@ let patrones = ["00","101","ABC","HO"];
             if(texto.substr(i, pos.length) == pos){
                 veces++
             }
-
         }
-        
     }
 
     return veces;

@@ -8,9 +8,9 @@ let veinte = 0;
 let diez = 0;
 let cinco = 0;
 
-if(numero % 5 != 0){
+if(numero % 5 != 0 || isNaN(numero) ){
 
-    alert("El número no es múltiplo de 5");
+    alert("Entrada inválida");
 
 }else{
 

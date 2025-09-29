@@ -8,7 +8,6 @@ if(numero >= 2){
         if(i%2 == 0){
             console.log(i);
         }
-        
     }
 
 }else{

@@ -1,27 +1,26 @@
 
-var count = 0;
+var cont = 0;
 
-function conteocartas(card){
+function conteocartas(carta){
 
-    if(["2", "3", "4","5", "6"].includes(card)){
-        count = count + 1;
-    }else if(["10", "J", "Q","K", "A"].includes(card)){
-        count = count -1;
+    if(["2", "3", "4","5", "6"].includes(carta)){
+        cont = cont + 1;
+    }else if(["10", "J", "Q","K", "A"].includes(carta)){
+        cont = cont -1;
     }
 
-    if(count<=0){
-        return count + " Hold";
+    if(cont<=0){
+        return cont + " Hold";
 
-    }else if(count > 0){
-        return count + " Bet";
+    }else if(cont > 0){
+        return cont + " Bet";
     }
-
 }
 
 
 
 while(true){
-    carta = prompt("Introduce una carta").toUpperCase();
+    let carta = prompt("Introduce una carta").toUpperCase();
     mensaje = conteocartas(carta)
-    alert( mensaje);
+    alert(mensaje);
 }

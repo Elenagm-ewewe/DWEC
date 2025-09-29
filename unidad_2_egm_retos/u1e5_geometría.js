@@ -1,18 +1,10 @@
-function calcularAreaTriangulo(base,altura){
-    return (base * altura)/2;
-};
+let AreaTrangulo = (base,altura) => (base * altura)/2 ;
 
-function calcularPerimetroTriangulo(lado1, lado2, lado3){
-    return lado1 + lado2 + lado3;
-};
+let PerimetroTriangulo = (lado1, lado2, lado3) => lado1 + lado2 + lado3;
 
-function calcularAreaCuadrado(lado){
-    return lado * lado;
-};
+let AreaCuadrado = (lado) => lado * lado;
 
-function calcularAreaRectangulo(base,altura){
-    return base * altura;
-};
+let AreaRectangulo = (base,altura) => base * altura;
 
 function calcularPerimetroCuadrado(altura){
     return altura * 4;
