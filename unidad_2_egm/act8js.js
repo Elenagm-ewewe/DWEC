@@ -34,7 +34,7 @@ function obtenerArray(){
     
         for (let a = 0 ; a < 9; a++) {
         
-            let nombrecelda = "cell"+q+a ;
+            let nombrecelda = "celda"+q+a ;
 
             let elementoescrito = document.getElementById(nombrecelda);
 
