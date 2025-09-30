@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 9. Unidad 2</title>
+</head>
+<body>
+
+    <script>
+
+        for (let i = 8; i <= 20; i++) {
+
+            let horas = i;
+            
+            for (let m = 0; m <= 45 ; m++) {
+                let minutos = m;
+
+                if(minutos%15 == 0 || minutos == 0){
+                console.log(convertirhoras(horas) + ":" + convertirMinutos(minutos));
+            }
+            
+        }
+    }
+
+
+        function convertirhoras(hora){
+            if(hora<10){
+                return "0" + hora;
+            }else{
+                return hora;
+            }
+        }
+
+
+        function convertirMinutos(minutos){
+            if(minutos<10){
+                return "0" + minutos;
+            }else{
+                return minutos;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

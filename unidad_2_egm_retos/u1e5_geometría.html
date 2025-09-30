@@ -8,23 +8,22 @@
 
 <script>
 
-    function calcularCirculo(){
-        let radioEntrada = parseFloat(document.getElementById("radio").value);
-        let salidaCirculo = document.getElementById("areacirculo");
+let base = 5;
+let altura = 6;
+let lado1 = 1;
+let lado2 = 7;
+let lado3 = 6;
+let radio = 5;
 
-        let area = calcularAreaCirculo(radioEntrada);
-        let perimetro = calcularPerimetroCirculo(radioEntrada);
 
-        salidaCirculo.innerHTML = "El área del círculo es: " + area + "<br>El perímetro del círculo es " + perimetro ;
-    };
-
-    document.addEventListener("DOMContentLoaded",function(){
-        const boton = document.getElementById("calculararea");
-
-        if(boton){
-            boton.addEventListener("click", calcularCirculo);
-        }
-    });
+console.log(areaTriangulo(base, altura));
+console.log(perimetroTriangulo(lado1,lado2,lado3));
+console.log(areaCuadrado(lado1));
+console.log(areaRectangulo(base,altura));
+console.log(perimetroCuadrado(lado1));
+console.log(perimetroRectangulo(base,altura));
+console.log(areaCirculo(radio));
+console.log(perimetroCirculo(radio));
 
 
 </script>
@@ -32,32 +31,5 @@
 </head>
 <body>
 
-    <h2>Círculo</h2>
-    <p>Radio</p>
-    <input type="text" id="radio">
-    <button id = "calculararea">Calcular área y perímetro</button>
-    <p id="areacirculo"></p>
-
-    <h2>Cuadrado</h2>
-    <p>Lado</p>
-    <input type="text" id="lado">
-
-
-
-    <h2>Rectángulo</h2>
-    <p>Base</p>
-    <input type="text" id="base">
-    <p>Altura</p>
-    <input type="text" id="altura">
-
-    <h2>Triángulo equilátero</h2>
-    <p>Base</p>
-    <input type="text" id="lado">
-
-    <h2>Triángulo isósceles</h2>
-    <p>Base</p>
-
-    <h2>Triángulo escaleno</h2>
-    
 </body>
 </html>

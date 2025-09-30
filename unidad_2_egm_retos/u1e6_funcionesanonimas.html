@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 6. Unidad 2</title>
+</head>
+<body>
+    
+<script>
+
+let base = 5;
+let altura = 6;
+let lado1 = 1;
+let lado2 = 7;
+let lado3 = 6;
+let radio = 5;
+
+
+//Las funciones relacionadas con el triángulo deben ser definidas e invocadas como funciones anónimas.
+let areaTriangulo = function(base,altura) {
+    return (base * altura)/2 ;
+}
+
+let perimetroTriangulo = function(lado1, lado2, lado3) {
+    return  lado1 + lado2 + lado3;
+}
+
+
+
+//Las funciones relacionadas con paralelogramos deben ser definidas e invocadas con el constructor function.
+function areaCuadrado(lado) {
+    return lado * lado;
+};
+
+function areaRectangulo(base,altura) {
+    return base * altura;
+} 
+
+function perimetroCuadrado(altura) {
+    return altura * 4;
+} 
+
+function perimetroRectangulo(base, altura){
+    return (altura * 2) + (base * 2);
+} 
+
+//Las funciones del círculo y la circunferencia deben ser funciones anónimas autoinvocadas.
+
+let areaCirculo = (radio) =>{
+    let resultado = Math.PI * radio * radio;
+    console.log(resultado);
+};
+
+let perimetroCirculo = (radio) => {
+    let resultado = 2 * Math.PI * radio;
+    console.log(resultado);
+} 
+
+
+console.log(areaTriangulo(base, altura));
+console.log(perimetroTriangulo(lado1,lado2,lado3));
+console.log(areaCuadrado(lado1));
+console.log(areaRectangulo(base,altura));
+console.log(perimetroCuadrado(lado1));
+console.log(perimetroRectangulo(base,altura));
+areaCirculo(radio);
+perimetroCirculo(radio);
+
+
+
+</script>
+
+
+
+</body>
+</html>

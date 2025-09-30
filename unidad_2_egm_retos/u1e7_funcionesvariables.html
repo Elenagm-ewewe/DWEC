@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 7. Unidad 2</title>
+</head>
+<body>
+    
+<script>
+
+let base = 5;
+let altura = 6;
+let lado1 = 1;
+let lado2 = 7;
+let lado3 = 6;
+let radio = 5;
+
+
+let areaTriangulo = function(base,altura) {
+    return (base * altura)/2 ;
+}
+
+let perimetroTrianguloEq = function(lado1) {
+    return  lado1 *3;
+}
+
+let perimetroTrianguloIs = function(lado1, lado2) {
+    return  (lado1 *2) + lado2;
+}
+
+let perimetroTrianguloES = function(lado1, lado2, lado3) {
+    return  lado1 + lado2 + lado3;
+}
+
+function areaCuadrado(lado) {
+    return lado * lado;
+};
+
+function areaRectangulo(base,altura) {
+    return base * altura;
+} 
+
+function perimetroCuadrado(altura) {
+    return altura * 4;
+} 
+
+function perimetroRectangulo(base, altura){
+    return (altura * 2) + (base * 2);
+} 
+
+let areaCirculo = (radio) =>{
+    let resultado = Math.PI * radio * radio;
+    console.log(resultado);
+};
+
+let perimetroCirculo = (radio) => {
+    let resultado = 2 * Math.PI * radio;
+    console.log(resultado);
+} 
+
+
+//--Función del triángulo------------------------------------------------------------------------------
+
+function perimetroTriangulo() {
+
+    if(arguments.length === 1){
+        return perimetroTrianguloEq(arguments[0]);
+    }else if(arguments.length === 2){
+        return perimetroTrianguloIs(arguments[0], arguments[1]);
+    }else if(arguments.length === 3){
+        return perimetroTrianguloES(arguments[0], arguments[1], arguments[2]);
+    }
+};
+
+console.log(perimetroTriangulo(lado1));
+console.log(perimetroTriangulo(lado1, lado2));
+console.log(perimetroTriangulo(lado1, lado2, lado3));
+
+
+
+//--Función del paralelogramo------------------------------------------------------------------------------
+
+function perimetroParalelogramo() {
+
+    if(arguments.length === 1){
+        return perimetroCuadrado(arguments[0]);
+    }else if(arguments.length === 2){
+        return perimetroRectangulo(arguments[0], arguments[1]);
+    }
+};
+
+
+console.log(perimetroParalelogramo(base));
+console.log(perimetroParalelogramo(base, altura));
+
+
+
+</script>
+
+
+    
+</body>
+</html>

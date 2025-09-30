@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 8. Unidad 2</title>
+</head>
+<body>
+
+    <script>
+        
+ /* Gusano: Se puede borrar con antivirus y se multiplica.
+    Bug: No se puede borrar con antivirus; se soluciona con una actualización.
+    Troyano: Se puede borrar con antivirus y no se multiplica.
+    Spam: No se puede borrar con antivirus ni con actualizaciones del sistema.
+    Exploit: No se puede borrar con antivirus; se soluciona con una actualización.
+ */
+
+let gusano = [true, true, undefined];
+let bug = [false, undefined, true];
+let troyano = [true, false, undefined];
+let spam = [false, undefined, false];
+let exploit = [false, undefined, true];
+
+let pregunta1;
+let pregunta2;
+let pregunta3;
+
+ let respuesta1 = prompt("¿Se puede borrar con antivirus? (si/no/no sé)" ).toLocaleLowerCase();
+
+ if(respuesta1 === "si"){
+    pregunta1 = true;
+ }else if(respuesta1 === "no"){
+    pregunta1 = false;
+ }else{
+    pregunta1 = undefined;
+ }
+
+  let respuesta2 = prompt("¿Se multiplica? (si/no/no sé)" ).toLocaleLowerCase();
+
+  if(respuesta2 === "si"){
+    pregunta2 = true;
+ }else if(respuesta2 === "no"){
+    pregunta2 = false;
+ }else{
+    pregunta2 = undefined;
+ }
+
+  let respuesta3 = prompt("¿Se soluciona con una actualización? (si/no/no sé)" ).toLocaleLowerCase();
+
+    if(respuesta3 === "si"){
+    pregunta3 = true;
+ }else if(respuesta3 === "no"){
+    pregunta3 = false;
+ }else{
+    pregunta3 = undefined;
+ }
+
+
+ let respuesta = [pregunta1, pregunta2, pregunta3];
+
+if(compararArrays(respuesta,bug)){
+    alert("Es un bug");
+}else if(compararArrays(gusano,respuesta)){
+    alert("Es un gusano");
+}else if(compararArrays(respuesta,troyano)){
+    alert("Es un troyano");
+}else if(compararArrays(respuesta,spam)){
+    alert("Es SPAM");
+}else if(compararArrays(respuesta,exploit)){
+    alert("Es un exploit");
+}else{
+    alert("Ni idea");
+}
+
+
+function compararArrays(array1, array2){
+
+  for (let i = 0; i < array1.length; i++) {
+       if (array1[i] !== array2[i]) {
+          return false;
+       }
+
+       if(array1[i] == array2[2]){
+            if(array1[i] = false){
+                return false;
+            }else if(array1[i] = undefined){
+                return undefined
+            }else{
+                return true;
+       }
+       }
+    }
+
+};
+    </script>
+    
+</body>
+</html>
