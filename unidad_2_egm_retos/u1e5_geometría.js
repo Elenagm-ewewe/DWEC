@@ -1,6 +1,10 @@
 let areaTriangulo = (base,altura) => (base * altura)/2 ;
 
-let perimetroTriangulo = (lado1, lado2, lado3) => lado1 + lado2 + lado3;
+let perimetroTrianguloEQ = (lado1) => lado1 *3;
+
+let perimetroTrianguloIS = (lado1, lado2) => lado1 + (lado2 *2);
+
+let perimetroTrianguloES = (lado1, lado2, lado3) => lado1 + lado2 + lado3;
 
 let areaCuadrado = (lado) => lado * lado;
 
