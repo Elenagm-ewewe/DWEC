@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3. Unidad 3</title>
+</head>
+<body>
+
+<script>
+
+let letrasdni = "TRWAGMYFPDXBNJZSQVHLCKE";
+let dnivalidos = [];
+
+let letra = prompt("Introduzca una letra del DNI").toLocaleUpperCase();
+letra = letra[0];
+
+    if(!letrasdni.includes(letra)){
+
+        alert("Letra no válida")
+
+    }else{
+
+        for(let c = 1 ; c <= 999 ; c++){
+            if(c%23 == letrasdni.indexOf(letra) )
+            dnivalidos.push(c);
+        }
+    }
+
+alert(`Hay ${dnivalidos.length} DNIs disponibles con la letra ${letra} son: \n ${dnivalidos.join(", ")}`)
+
+    </script>
+    
+</body>
+</html>
