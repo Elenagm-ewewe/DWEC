@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="u3e8_paises.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+
+    <script>
+
+        let paises =["España", "Francia", "Italia", "Payasolandia","China", "Japón", "Suiza","Corea del Norte" ];
+
+        
+//----Llamada a las funciones -----------------------------------------------------------------------------------------------
+
+        console.log(nelementos(paises));
+        console.log(imprimirpaises(paises));
+
+        console.log("Orden de los países invertido")
+        console.log(invertir(paises));
+
+
+        console.log("Países ordenados:")
+        console.log(ordenar(paises));
+
+        //Añadir elemento al principio y mostramos el array modificado
+
+        console.log("Añadimos nuevo pais al principio:")
+        anadirelemento(paises, "Venezuela");
+        console.log(paises)
+
+        
+        //Añadir elemento al final y mostramos el array modificado
+
+        console.log("Añadimos nuevo pais al final:")
+        anadirelementofinal(paises, "Canada");
+        console.log(paises)
+
+        //Eliminamos primer elemento del array
+
+        console.log(borrarprincipio(paises));
+        console.log(paises)
+
+
+        //Eliminamos ultimo elemento del array
+
+        console.log(borrarfinal(paises));
+        console.log(paises)
+
+
+
+    </script>
+    
+</body>
+</html>
