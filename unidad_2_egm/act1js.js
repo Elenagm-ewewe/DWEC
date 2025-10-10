@@ -14,6 +14,8 @@ function conteocartas(carta){
 
     }else if(cont > 0){
         return cont + " Bet";
+    }else{
+        return "Valor no válido";
     }
 }
 

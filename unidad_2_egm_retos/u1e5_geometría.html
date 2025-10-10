@@ -8,56 +8,33 @@
 
 <script>
 
-    function calcularCirculo(){
-        let radioEntrada = parseFloat(document.getElementById("radio").value);
-        let salidaCirculo = document.getElementById("areacirculo");
+let base = 1;
+let altura = 3 ;
+let radio = 7;
+let lado1 =6.5 ;
+let lado2 = 23;
+let lado3 =10;
 
-        let area = calcularAreaCirculo(radioEntrada);
-        let perimetro = calcularPerimetroCirculo(radioEntrada);
+let areatriangulo = areaTriangulo(base, altura);
+let areacirculo = areaCirculo(radio);
+let arearectangulo = areaRectangulo(lado1, lado2);
+let perimetrotriangulo = perimetroTriangulo(lado1, lado2, lado3);
+let perimetrocirculo = perimetroCirculo(radio);
+let perimetrorectangulo = perimetroRectangulo(base, altura);
 
-        salidaCirculo.innerHTML = "El área del círculo es: " + area + "<br>El perímetro del círculo es " + perimetro ;
-    };
 
-    document.addEventListener("DOMContentLoaded",function(){
-        const boton = document.getElementById("calculararea");
-
-        if(boton){
-            boton.addEventListener("click", calcularCirculo);
-        }
-    });
-
+console.log("El área del triángulo es: " + areatriangulo);
+console.log("El área del círculo es: " + areacirculo);
+console.log("El área del rectángulo es: " + arearectangulo);
+console.log("El perímetro del triángulo es: " + perimetrotriangulo);
+console.log("El perímetro del círculo es: " + perimetrocirculo);
+console.log("El perímetro del rectángulo es: " + perimetrorectangulo);
 
 </script>
 
 </head>
 <body>
 
-    <h2>Círculo</h2>
-    <p>Radio</p>
-    <input type="text" id="radio">
-    <button id = "calculararea">Calcular área y perímetro</button>
-    <p id="areacirculo"></p>
-
-    <h2>Cuadrado</h2>
-    <p>Lado</p>
-    <input type="text" id="lado">
-
-
-
-    <h2>Rectángulo</h2>
-    <p>Base</p>
-    <input type="text" id="base">
-    <p>Altura</p>
-    <input type="text" id="altura">
-
-    <h2>Triángulo equilátero</h2>
-    <p>Base</p>
-    <input type="text" id="lado">
-
-    <h2>Triángulo isósceles</h2>
-    <p>Base</p>
-
-    <h2>Triángulo escaleno</h2>
     
 </body>
 </html>

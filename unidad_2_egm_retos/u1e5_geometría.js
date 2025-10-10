@@ -1,23 +1,17 @@
-let AreaTrangulo = (base,altura) => (base * altura)/2 ;
+let areaTriangulo = (base,altura) => (base * altura)/2 ;
 
-let PerimetroTriangulo = (lado1, lado2, lado3) => lado1 + lado2 + lado3;
+let areaCuadrado = (lado) => lado * lado;
 
-let AreaCuadrado = (lado) => lado * lado;
+let areaRectangulo = (base,altura) => base * altura;
 
-let AreaRectangulo = (base,altura) => base * altura;
+let areaCirculo = (radio) => Math.PI * radio * radio;
 
-function calcularPerimetroCuadrado(altura){
-    return altura * 4;
-};
+let perimetroTriangulo = (lado1, lado2, lado3) => lado1 + lado2 + lado3;
 
-function calcularPerimetroRectangulo(base, altura){
-    return (altura * 2) + (base * 2);
-};
+let perimetroCuadrado = (altura) => altura * 4;
 
-function calcularAreaCirculo(radio){
-    return Math.PI * radio * radio
-};
+let perimetroRectangulo = (base, altura) => (altura * 2) + (base * 2);
 
-function calcularPerimetroCirculo(radio){
-    return 2 * Math.PI * radio;
-}
+let perimetroCirculo = (radio) => 2 * Math.PI * radio;
+
+

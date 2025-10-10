@@ -1,7 +1,7 @@
 
-let array = [[0, -1, 0, -1],
-            [0, 0, -1, -1],
-             [-1, 0, -1, 0]];
+let array = [[0, -1, 0],
+            [0, 0, -1],
+            [-1, 0, -1]];
 
 function contandoMinas(array){
 
@@ -19,11 +19,11 @@ for (let j = 0; j < array[i].length; j++) {
 
 
         if(o== 0 && p == 0)continue;
-      
+
         let posX = i + o;
         let posY = j + p;
 
-        if(posX < 0 || posX >= array.length || posY < 0 || posY >= array[0].length){
+        if(posX < 0 || posX >= array.length || posY < 0 || posY >= array[i].length){
             continue;
         }
 

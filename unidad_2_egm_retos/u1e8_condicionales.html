@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 8. Unidad 2</title>
+</head>
+<body>
+<script>
+ //borrar con antivirus
+ //se multiplica
+ //solucion con actualizacion
+
+let gusano = [true, true, undefined];
+let bug = [false, undefined, true];
+let troyano = [true, false, undefined];
+let spam = [false, undefined, false];
+let exploit = [false, undefined, true];
+
+
+let respuesta1 = prompt("Se puede borrar con antivirus? (si/no)");
+if (respuesta1.toLowerCase() === "si") {
+    respuesta1 = true;
+} else if (respuesta1.toLowerCase() === "no") {
+    respuesta1 = false;
+} else {
+    respuesta1 = undefined;
+};
+
+
+let respuesta2 = prompt("¿Se multiplica? (si/no)")
+
+    if(respuesta2.toLowerCase() === "si") {
+    respuesta2 = true;
+} else if (respuesta2.toLowerCase() === "no") {
+    respuesta2 = false;
+} else {
+    respuesta2 = undefined;
+};
+
+let respuesta3 = prompt("¿Se soluciona con una actualización (si/no)")
+
+    if(respuesta3.toLowerCase() === "si") {
+    respuesta3 = true;
+} else if (respuesta3.toLowerCase() === "no") {
+    respuesta3 = false;
+} else {
+    respuesta3 = undefined;
+};
+
+
+let respuestausuario = [respuesta1,respuesta2,respuesta3];
+
+    if(respuestausuario = gusano){
+        alert("Se trata de un gusano") ;
+    }else if(respuestausuario = bug){
+        alert("Se trata de un bug");
+    }else if(respuestausuario = troyano){
+        alert("Se trata de un troyano");
+    }else if(respuestausuario = spam){
+        alert("Se trata de un spam");
+    }else if(respuestausuario = exploit){
+        alert("Se trata de un spam");
+    }else{
+        alert("Ni idea");
+    }
+    
+
+
+
+</script>
+    
+</body>
+</html>
