@@ -7,10 +7,9 @@
 
 <script>
 
-let radio = prompt("Introduce el radio de la esfera (en metros)");
+let radio = 4;
 
-let volumen = (4/3)*Math.PI*(radio^3);
-
+let volumen = (a) => (4/3)*Math.PI*(a**3);
 alert("El volumen de una esfera con radio " + radio + " es " + volumen + " m3." );
 
 </script>

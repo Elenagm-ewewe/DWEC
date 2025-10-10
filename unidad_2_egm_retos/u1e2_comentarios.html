@@ -29,7 +29,7 @@
     for (let x = 1 ; x <= 10; x++) {  //Quitamos los ;, si lo dejamos el bucle solo se repetirá una vez
         let r = 0; //Reiniciamos la variable r para que no se acumule.
         r = y * m;  
-        tablamultiplicar.innerHTML += y + "x" + m + "=" + r + "<br>"; //Sobreescribimos en el objeto con el id "tabla" el string resultante de formar la multiplicación.
+        document.write(y + "x" + m + "=" + r + "<br>"); //Sobreescribimos en el objeto con el id "tabla" el string resultante de formar la multiplicación.
         //Tenemos que usar .innerHTML en vez de .textContent porque este ultimo no lee caracteres especiales ni etiquetas como "<b>"
         m++; //Aumentamos el valor de m en 1;
     }

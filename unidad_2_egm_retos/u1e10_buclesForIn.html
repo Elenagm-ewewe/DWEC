@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 10. Unidad 2</title>
+</head>
+<body>
+
+    <script>
+
+        let jugadores = ["Juan", "Paco", "Belén", "Lucía", "Roberto", "Alicia","Emilio", "Isabel", "Mauricio", "Beatriz"];
+dorsal = 3;
+
+//Con FOR IN
+
+        for(let pos in jugadores){
+            console.log("Jugador: " + jugadores[pos] + ". Dorsal: " + dorsal)
+            dorsal = dorsal + 3;
+        };
+
+//Con FOR OF
+
+dorsal = 3;
+            for(let pos of jugadores){
+            console.log("Jugador: " + pos + ". Dorsal: " + dorsal)
+            dorsal = dorsal + 3;
+        };
+
+
+//FOR NORMAL
+
+dorsal = 3;
+
+for (let i = 0 ; i < jugadores.length ; i++) {
+     console.log("Jugador: " + jugadores[i] + ". Dorsal: " + dorsal)
+            dorsal = dorsal + 3;
+    
+}
+
+    </script>
+
+
+
+    
+</body>
+</html>
