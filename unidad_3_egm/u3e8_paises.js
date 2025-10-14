@@ -11,7 +11,8 @@ let opcion = prompt(
 3. Mostrar un intervalo de países
 4. Añadir un país
 5. Borrar un país
-6. Consultar un país`);
+6. Consultar un país
+7. Salir`);
 
 opcion = parseInt(opcion);
 
@@ -19,20 +20,20 @@ opcion = parseInt(opcion);
 switch(opcion){
 
 case 1:
-    console.log(nelementos(paises));
+    document.writeln(nelementos(paises));
 break;
-
+1
 //_____________________________________________________
 
 case 2:
 
-    let opcion2 =  prompt(`Selecciona una opción:
+    let opcion2 =  parseInt(prompt(`Selecciona una opción:
                             1. Mostrar en orden tal cual está
                             2. Mostrar en orden alfabético
                             3. Mostrar en orden inverso`
-                            );
+                            ));
 
-                            opcion2 = parseInt(opcion2);
+                            /* opcion2 = parseInt(opcion2); */
         switch(opcion2){
             case 1:
                 document.writeln(imprimirpaises(paises));
@@ -54,7 +55,7 @@ case 3:
     let inicio = prompt("Introduce la posicion de inicio");
     let fin = prompt("Introduce la posicion de fin");
 
-     document.writeln(mostrarInter(paises, inicio, fin));
+    document.writeln(mostrarInter(paises, inicio, fin));
 
 break;
 
@@ -62,9 +63,9 @@ break;
 case 4:
     let nuevopais = prompt("Introduce un nuevo país");
 
-    let opcion3 =  prompt(`1. Añadir al principio
-                            2. Añadir al final`)
-        opcion3 = parseInt(opcion3);
+    let opcion3 =  parseInt(prompt(`1. Añadir al principio
+                            2. Añadir al final`));
+
         switch(opcion3){
             case 1:
                 document.writeln(anadirelemento(paises, nuevopais));
@@ -80,9 +81,8 @@ break;
 case 5:
 
 
-    let opcion4 =  prompt(`1. Borrar al inicio
-                            2. Borrar al final`);
-        opcion4 = parseInt(opcion4);
+    let opcion4 =  parseInt(prompt(`1. Borrar al inicio
+                            2. Borrar al final`));
         switch(opcion4){
             case 1:
                 document.writeln(borrarprincipio(paises));
@@ -97,9 +97,9 @@ break;
 
 case 6:
 
-let opcion5 = prompt(`1. Consulta por posición
-                    2. Consulta por nombre`);
-        opcion5 = parseInt(opcion5);
+let opcion5 = parseInt(prompt(`1. Consulta por posición
+                    2. Consulta por nombre`));
+                    
         switch(opcion5){
             case 1:
 
@@ -127,7 +127,9 @@ break;
 
  //Mostrar el número de elementos del array
 
-    let nelementos = (a) => a.length;
+    function nelementos(a){
+        return "Número de elementos: " + a.length;
+    } 
 
 //Mostrar todos los elementos del array
 
@@ -209,5 +211,5 @@ function mostrarInter(a, ini, fin){
     for(let i = ini ; i < fin; i++){
         resul.push(a[i]);
     }
-    return resul;
+    return resul.join(", ");
 }
