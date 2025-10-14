@@ -7,5 +7,90 @@
 </head>
 <body>
     
+<script>
+
+/* Geografía (azul)
+Arte y Literatura (morado)
+Historia (amarillo)
+Entretenimiento (rosa)
+Ciencias y Naturaleza (verde)
+Deportes y Pasatiempos (naranja) */
+
+let pregunta = []
+
+let acertadas = 0;
+let falladas = 0;
+
+while(acertadas < 4 && falladas < 3){
+
+    let respuesta1 = prompt(`GEOGRAFÍA
+    Pregunta:  ¿Cuántos océanos hay en la Tierra? 
+    a) 4
+    b) 5
+    c) 6`).toLocaleLowerCase();
+
+    if(respuesta1 == "b"){
+        alert("CORRRECTO");
+        acertadas++;
+    }else{
+        alert("MUY MAL");
+        falladas++;
+    }
+        
+
+    let respuesta2 = prompt(`ARTE Y LITERATURA
+    Pregunta: ¿De qué época artística es el pintor Bartolomé Esteban Murillo?
+    a) Barroco
+    b) Románico
+    c) Gótico`).toLocaleLowerCase();
+
+    if(respuesta2 == "a"){
+        alert("CORRRECTO");
+        acertadas++;
+    }else{
+        alert("MUY MAL");
+        falladas++;
+    }
+
+
+    let respuesta3 = prompt(`HISTORIA
+    Pregunta: ¿En qué año se disolvió la Unión Soviética?
+    a) 1997
+    b) 1985
+    c) 1991`).toLocaleLowerCase();
+
+    if(respuesta3 == "c"){
+        alert("CORRRECTO");
+        acertadas++;
+    }else{
+        alert("MUY MAL");
+        falladas++;
+    }
+
+    let respuesta4 = prompt(`ENTRETENIMIENTO
+    Pregunta: ¿Quién fue el director y a la vez protagonista de la película “Ciudadano Kane”?
+    a) Isaac Asimov
+    b) George Orwell
+    c) Orson Welles`).toLocaleLowerCase();
+
+    if(respuesta4 == "c"){
+        alert("CORRRECTO");
+        acertadas++;
+    }else{
+        alert("MUY MAL");
+        falladas++;
+    }
+
+
+}
+
+if(acertadas>=4){
+    alert("Has acertado 4 preguntas correctamente!")
+}else if(falladas >= 3){
+    alert("Has fallado 3 :( ")
+}
+
+</script>
+
 </body>
 </html>
