@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reto 12. Unidad 2</title>
 </head>
 <body>
     
 <script>
 
+
+//Crea una función que muestre los números del 1 al 100 excepto los múltiplos de 3.
+function numeros(){
+    for(let i = 0 ; i <= 100; i++){
+        if(i%3 != 0){
+            console.log(i)
+        }
+    }
+}
+
+//Crea otra función que muestre una lista con los meses del año excepto los meses de verano.
+function meses(){
+
+    let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+
+    for(let i = 0 ; i < 12 ; i++){
+        if((i!=5)||(i!=6)||(i!=7)){
+        console.log(meses[i])
+        }
+    }
+}
+
+
+numeros();
+meses();
 
     
 </script>

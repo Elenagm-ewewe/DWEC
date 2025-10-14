@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let inicio = prompt("Introduce la hora de inicio");
+let inicioh = inicio.substring(0, 2);
+let iniciom = inicio.substring(3, 5);
+
+
+if((inicioh < 0) || (inicioh > 24) ||(iniciom < 0) || (iniciom > 59) || (inicio.charAt(2) != ':')){
+    alert("ERROR. Introduce un formato de hora válida");
+}else{
+    inicioh = parseInt(inicioh);
+    iniciom = parseInt(iniciom);
+}
+
+let final = prompt("Introduce la hora final");
+let finalh = final.substring(0, 2);
+let finalm = final.substring(3, 5);
+
+if((finalh < 0) || (finalh > 24) ||(finalm < 0) || (finalm > 59) || (final.charAt(2) != ':')){
+    alert("ERROR. Introduce un formato de hora válida");
+}else{
+    finalh = parseInt(finalh);
+    finalm = parseInt(finalm);
+}
+
+let inter = prompt("Introduce los minutos de intervalo");
+    if(inter < 0){
+        alert("ERROR. Introduce un valor mayor que 0");
+    }else{
+        inter = parseInt(inter);
+    }
+
+
+
+function horas(ih, im, fh, fm, int){
+
+    let mintotalinicio = ih*60 + im;
+    let mintotalfinal = fh*60 + fm;
+    
+    if (mintotalfinal < mintotalinicio) {
+        mintotalfinal += (24 * 60);
+    }
+
+
+    for(let i = mintotalinicio ; i <= mintotalfinal ; i += int){
+
+        let horas = Math.floor(i/60)%24;
+        let minutos = i%60;
+        let hh = horas;
+        let mm = minutos;
+
+        if(minutos < 10){
+            mm = "0" + minutos;
+        }
+        
+        if(horas < 10){
+            hh = "0" + horas;   
+        }
+
+        console.log(hh + ":" + mm);
+
+        
+    }
+
+
+}
+
+
+
+horas(inicioh, iniciom, finalh, finalm, inter);
+
+</script>
+
+</body>
+</html>

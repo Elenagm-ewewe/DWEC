@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 15. Unidad 2</title>
+</head>
+<body>
+    
+<script>
+
+let contrasena = prompt("Introduce la contraseña");
+
+let essegura = 0;
+
+if(mayorocho(contrasena)){
+    essegura++;
+}
+
+if(contieneMayus(contrasena)){
+    essegura++;
+}
+
+if(contieneMinus(contrasena)){
+    essegura++;
+}
+
+if(contieneNum(contrasena)){
+    essegura++;
+}
+
+if(contieneCarac(contrasena)){
+    essegura++;
+}
+
+
+if(essegura === 0){
+    alert("La contraseña es DÉBIL");
+}else if(essegura >= 1 && essegura <= 2){
+    alert("La contraseña es POCO SEGURA");
+}else if(essegura > 2){
+    alert("La contraseña es SEGURA");
+}
+
+function mayorocho(a){
+    if(a.length >= 8){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+function contieneMayus(a){
+let mayus = "QWERTYUIOPASDFGHJKLÑZXCVBNMÇ";
+
+    for(let i = 0 ; i< mayus.length ; i++){
+        for( let u = 0 ; u < a.length ; u++){
+            
+            if(mayus.charAt(i) === a.charAt(u)){
+                return true;
+            }
+        }
+    }
+return false;
+}
+
+function contieneMinus(a){
+    let minus = "qwetyuiopasdfghjklzxcvbnmçñ";
+
+    for(let i = 0 ; i< minus.length ; i++){
+        for( let u = 0 ; u < a.length ; u++){
+            
+            if(minus.charAt(i) === a.charAt(u)){
+                return true;
+            }
+        }
+    }
+return false;
+}
+
+function contieneNum(a){
+    let num = "1234567890";
+
+    for(let i = 0 ; i< num.length ; i++){
+        for( let u = 0 ; u < a.length ; u++){
+            
+            if(num.charAt(i) === a.charAt(u)){
+                return true;
+            }
+        }
+    }
+return false;
+}
+
+function contieneCarac(a){
+    let esp = "-_=*+&@#";
+
+    for(let i = 0 ; i< esp.length ; i++){
+        for( let u = 0 ; u < a.length ; u++){
+            
+            if(esp.charAt(i) === a.charAt(u)){
+                return true;
+            }
+        }
+    }
+return false;
+}
+
+
+</script>
+
+</body>
+</html>

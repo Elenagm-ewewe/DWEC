@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+//Crea un programa que muestre por consola todas las horas que van desde las 15:00 a las 17:00 de 15 en 15 minutos (ej. 15:00, 15:15, 15:30, 15:45, 16:00, 16:15, 16:30, 16:45, 17:00)
+
+function horas(){
+
+    for(let h = 15 ; h <= 17 ; h++){
+
+        if(h != 17){
+            for(let m = 0 ; m <= 45 ; m += 15){
+                if(m==0){
+                    console.log(h + ":0" + m)
+                }else{
+                    console.log(h + ":" + m);
+                }
+            }
+        }else{
+            console.log("17:00");
+
+        }
+    }
+
+}
+
+
+horas();
+
+    </script>
+
+
+</body>
+</html>
