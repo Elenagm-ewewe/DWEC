@@ -7,5 +7,110 @@
 </head>
 <body>
     
+<script>
+
+let aciertos = 0;
+let fallos = 0;
+
+let respuesta1 = prompt("Pregunta 1: ¿Cuál es la capital de Francia?\n a) Berlín\n b) Madrid\n c) París\n d) Roma").toLowerCase();
+
+if (respuesta1 === "c" || respuesta1 === "parís") {
+    alert("¡Correcto!");
+    aciertos++; 
+} else {
+    alert("Incorrecto. La respuesta correcta era: c) París\n"); 
+    fallos++;
+}   
+
+let respuesta2 = prompt("Pregunta 2: ¿Cuál es el planeta más grande del sistema solar?\n a) Tierra\n b) Júpiter\n c) Saturno\n d) Marte").toLowerCase();
+if (respuesta2 === "b" || respuesta2 === "júpiter") {
+    alert("¡Correcto!");    
+    aciertos++;
+} else {
+    alert("Incorrecto. La respuesta correcta era: b) Júpiter\n");
+    fallos++;
+}
+
+let respuesta3 = prompt("Pregunta 3: ¿Quién escribió 'Cien años de soledad'?\n a) Mario Vargas Llosa\n b) Gabriel García Márquez\n c) Pablo Neruda\n d) Isabel Allende").toLowerCase();
+if (respuesta3 === "b" || respuesta3 === "gabriel garcía márquez") {
+    alert("¡Correcto!");
+    aciertos++;
+} else {
+    alert("Incorrecto. La respuesta correcta era: b) Gabriel García Márquez\n");
+    fallos++;
+}  
+
+    if (fallos === 3) {
+        alert("💀 Has perdido. Mejor suerte la próxima vez.");
+    }else{
+
+        let respuesta4 = prompt("Pregunta 4: ¿Cuál es el elemento químico con el símbolo 'O'?\n a) Oro\n b) Oxígeno\n c) Plata\n d) Hidrógeno").toLowerCase();
+        if (respuesta4 === "b" || respuesta4 === "oxígeno") {
+            alert("¡Correcto!");
+            aciertos++;
+        } else {
+            alert("Incorrecto. La respuesta correcta era: b) Oxígeno\n");
+            fallos++;
+        }
+
+        if (fallos === 3) {
+            alert("💀 Has perdido. Mejor suerte la próxima vez.");
+        }else if (aciertos === 4) {
+            alert("🎉 ¡Has ganado el Trivial!");
+        }else{
+
+            let respuesta5 = prompt("Pregunta 5: ¿En qué año llegó el hombre a la Luna?\n a) 1965\n b) 1969\n c) 1972\n d) 1959").toLowerCase();
+            if (respuesta5 === "b" || respuesta5 === "1969") {
+                alert("¡Correcto!");
+                aciertos++;
+            } else {
+                alert("Incorrecto. La respuesta correcta era: b) 1969\n");
+                fallos++;
+            }
+
+                if (fallos === 3) {
+                    alert("💀 Has perdido. Mejor suerte la próxima vez.");
+                }else if (aciertos === 4) {
+                    alert("🎉 ¡Has ganado el Trivial!");
+                }else{
+                    let respuesta5 = prompt("Pregunta 5: ¿En qué año llegó el hombre a la Luna?\n a) 1965\n b) 1969\n c) 1972\n d) 1959").toLowerCase();
+                        if (respuesta5 === "b" || respuesta5 === "1969") {
+                            alert("¡Correcto!");
+                            aciertos++;
+                        } else {
+                            alert("Incorrecto. La respuesta correcta era: b) 1969\n");
+                            fallos++;
+                        }
+
+                        if (fallos === 3) {
+                            alert("💀 Has perdido. Mejor suerte la próxima vez.");
+                        }else if (aciertos === 4) {
+                            alert("🎉 ¡Has ganado el Trivial!");
+                        }else{
+
+                            let respuesta6 = prompt("Pregunta 6: ¿Cuál es el río más largo del mundo?\n a) Amazonas\n b) Nilo\n c) Yangtsé\n d) Misisipi").toLowerCase();
+                            if (respuesta6 === "a" || respuesta6 === "amazonas") {
+                                alert("¡Correcto!");
+                                aciertos++;
+                            } else {
+                                alert("Incorrecto. La respuesta correcta era: a) Amazonas\n");
+                                fallos++;
+                            }
+
+                        if (fallos === 3) {
+                            alert("💀 Has perdido. Mejor suerte la próxima vez.");
+                        }else if (aciertos === 4) {
+                            alert("🎉 ¡Has ganado el Trivial!");
+                        
+        
+                        }
+                        }
+                    }
+                }
+            }
+
+
+</script>
+
 </body>
 </html>
