@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 11. Unidad 2
-    </title>
+    <title>Reto 11. Unidad 2</title>
 
 <script>
 
     let entrada = false;
 
-
-    let entradausuario = prompt("¿Cuál fue el primer presidente de la democracia española?").toLocaleLowerCase();
-
-
         do{
-
+            let entradausuario = prompt("¿Cuál fue el primer presidente de la democracia española?").toLocaleLowerCase();
             let arrayusuario = entradausuario.split(" ");
             console.log(arrayusuario);
 
                 if(arrayusuario[0] == "adolfo" && (arrayusuario[1] == "suarez" || arrayusuario[1] == "suárez")){
                     entrada = true;
+                }else{
+                    alert("Tonto!")
                 }
-
-
+                
         }while(!entrada); 
 
 </script>
