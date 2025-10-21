@@ -4,34 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto 4. Unidad 3</title>
+
+    <style>
+
+  body {
+    background-repeat:inherit;
+    background-image: url("9689c166b2ade094baf20ccabd1ab5ce.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+
+  h1, h3 {
+    color: #2f3640;
+  }
+
+  form {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+  }
+
+  input{
+    width: 100%;
+    font-size: 20px;
+    padding: 7px;
+  }
+
+select, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #dcdde1;
+    font-size: 14px;
+  }
+
+
+  button {
+    height: 60px;
+    background-color: #5289c9;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 2s ease;
+    font-size: 30px;
+  }
+
+button:hover {
+  background-color: #0e7a17;
+  font-size: 34px;
+  transform: rotate3d(-15, 0, 20, 720deg);
+}
+
+  #resul{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .luz-parpadeante {
+  font-size: 24px;
+  color: red;
+  padding: 30px;
+}
+
+    </style>
 </head>
 <body>
 
+<form id="formulario" name="formulario">
+<label>Número:</label>
+<input type="text" name="num" required>
 
+<br>
 
-        <h3>Introduce un número y la base en la que se encuentra </h3>
+<label>Seleciona la base del número introducido</label>
+<select name="bases">
+    <option value="binario">Binario</option>
+    <option value="decimal">Decimal</option>
+    <option value="octal">Octal</option>
+    <option value="hexadecimal">Hexadecimal</option>
+</select>
 
-
-<form id="formulario">
-        <label>Número:</label>
-        <input type="text" name="num" required>
-
-        <label>Base:</label>
-        <select name="bases" required>
-            <option value="binario">Binario</option>
-            <option value="octal">Octal</option>
-            <option value="decimal">Decimal</option>
-            <option value="hexadecimal">Hexadecimal</option>
-        </select>
-
-        <button type="submit">Convertir</button>
-
+<button type="submit">Convertir</button>
 </form>
 
-
-<p id="resultado"></p>
+<p id="resul"></p>
 
 <script src="reto_4.js"></script>
-    
+
 </body>
 </html>
