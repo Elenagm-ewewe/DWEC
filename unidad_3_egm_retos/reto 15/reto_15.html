@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 15. Unidad 3</title>
+    <link href="reto_15.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="formularios">
+
+    <div class = "anadir-hospital">
+            <h3>Añadir hospital</h2>
+        <form id="nuevohosp">
+            <label>Nombre del hospital</label>
+            <input type="text" name="nuevonombrehosp" id="nuevonombrehosp" required>
+
+            <label>Localidad</label>
+            <input type="text" name="nuevalocalidadhosp" id="nuevalocalidadhosp" required>
+
+            <label>Responsable</label>
+            <input type="text" name="nuevaresponhosp" id="nuevaresponhosp" required>
+
+            <button type="submit">Añadir hospital</button>
+        </form>
+    </div>
+
+    <div class = "anadir-personal">
+            <h3>Añadir personal</h2>
+        <form id="nuevoperso">
+            <label>Nombre del empleado</label>
+            <input type="text" name="nuevonombreperso" id="nuevonombreperso" required>
+
+            <label>Especialidad</label>
+            <select name="especialidad" id="especialidad" required>
+                <option value="Médico">Médico</option>
+                <option value="Enfermero">Enfermero</option>
+                <option value="Celador">Celador</option>
+            </select>
+
+            <label>Hospital</label>
+                <select id="pHospital" required></select>
+
+            <button type="submit">Añadir personal</button>
+        </form>
+    </div>
+
+<div class="anadir-paciente">
+    <h3>Añadir paciente</h2>
+        <form id="nuevopaciente">
+            <label>Nombre del paciente</label>
+            <input type="text" name="nuevonombrepaci" id="nuevonombrepaci">
+
+            <label>Personal asignado</label>
+            <select id="nuevopersodepaci"></select>
+
+            <label>Hospital</label>
+                <select id="pHospital"></select>
+
+            <button type="submit">Añadir personal</button>
+        </form>
+
+</div>
+
+</div>
+
+<div class = "listas">
+
+<h2>Hospitales</h2>
+<div id="lista-hospitales"></div>
+
+<h2>Personal</h2>
+<div id="lista-personal"></div>
+
+<h2>Pacientes</h2>
+<div id="lista-pacientes"></div>
+    
+</div>
+
+    <script src="reto_15.js"></script>
+
+</body>
+</html>
