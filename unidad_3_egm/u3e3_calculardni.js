@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 3. Unidad 3</title>
-</head>
-<body>
-
-<script>
 
 let letrasdni = "TRWAGMYFPDXBNJZSQVHLCKE";
 let dnivalidos = [];
@@ -28,8 +18,3 @@ letra = letra[0];
     }
 
 alert(`Hay ${dnivalidos.length} DNIs disponibles con la letra ${letra} son: \n ${dnivalidos.join(", ")}`)
-
-    </script>
-    
-</body>
-</html>
