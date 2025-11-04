@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 18. Unidad 3</title>
+    <link rel="stylesheet" href="reto_18.css">
+</head>
+<body>
+    
+    <div>
+
+        <h3>Añadir biblioteca</h3>
+        <label>Nombre de la biblioteca:</label>
+        <input type="text" id="nombrebiblio">
+
+        <label>Localidad:</label>
+        <input type="text" id="localidad">
+
+        <label>Responsable:</label>
+        <input type="text" id="responsable">
+
+        <button id="crearbiblioteca">Crear Biblioteca</button>
+    </div>
+
+        <div>
+
+        <h3>Añadir libro</h3>
+        <label>Título</label>
+        <input type="text" id="titulo" required>
+
+        <label>Autor:</label>
+        <input type="text" id="autor" required>
+
+
+        <label>Biblioteca</label>
+        <select id="bibliotecas" required></select>
+        
+        <button id="crearlibro">Añadir libro</button>
+    </div>
+
+    <div>
+        <h3>Añadir Socio</h3>
+        <label>Nombre:</label>
+        <input id="nombresocio" type="text" required>
+
+        <label>Biblioteca</label>
+        <select id="bibliotecasocio" required></select>
+
+        <button id="crearsocio">Añadir socio</button>
+    </div>
+
+    <button id="verbibliotecas">Lista de bibliotecas</button>
+    <button id="versocios">Lista de socios</button>
+    <button id="verlibros">Lista de libros</button>
+
+    <div id="resultado"></div>
+
+    <script src="reto_18.js"></script>
+</body>
+</html>

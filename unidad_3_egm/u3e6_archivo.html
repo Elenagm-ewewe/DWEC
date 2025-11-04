@@ -6,22 +6,44 @@
     <title>Ejercicio 6</title>
 </head>
 <body>
+
+    <style>
+        td, th{
+            border: 1px solid black;
+            padding: 2px;
+            margin-top: 1em;
+        }
+
+        table{
+            padding: 2px;
+            margin-top: 1em;
+        }
+
+        button{
+            padding: 1em;
+            background-color: bisque;
+        }
+
+
+    </style>
     
-<button id="tabla">Mostrar una tabla con los valores</button>
+<button id="tabla" type="submit">Mostrar una tabla con los valores</button>
 
 <br>
 
-<input type="text" id="provinciainput">
+<label>Provincia</label>
+<input type="text" id="provinciainput" placeholder="Ej. Santander">
 <button id="provincia">Mostrar por provincia</button>
 
 <br>
-
-<input type="num" id="valor"></input>
+<input type="number" id="valor" placeholder="Ej. 48"></input>
 <button id="condicionmenor">Mostrar menores al nº introducido</button>
 <button id="condicionmayor">Mostrar mayores al nº introducido</button>
 
 
 
 <div id="resultado"></div>
+
+<script src="u3e6_archivo.js"></script>
 </body>
 </html>

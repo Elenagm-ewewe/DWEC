@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 10 y 11. Unidad 3</title>
+    <link rel="stylesheet" href="reto_10-11.css">
+</head>
+<body>
+
+<div class="contenedor">
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+
+        <label>Edad</label>
+        <input type="number" id="edad">
+
+        <label>Especialidad</label>
+        <select id="especialidad">
+            <option value="1">Sistemas</option>
+            <option value="2">Web</option>
+            <option value="3">Multiplataforma</option>
+        </select>
+
+        <button id="insertarPrincipio">Insertar al principio</button>
+        <button id="insertarFinal">Insertar al final</button>
+
+    </div>
+    
+    <div class="contenedor">
+        <button id="borrarprimero">Borrar el primero</button>
+        <button id="borrarfinal">Borrar el ultimo</button>
+        <button id="mostrarLista">Mostrar lista</button>
+        <button id="mostrarListaOrdenada">Mostrar lista ordenada</button>
+</div>
+
+    <div class="contenedor">
+        <label>Nombre</label>
+        <input type="text" id="nombrebuscar">
+        <button id="buscarnombre">Buscar por nombre</button>
+
+    </div>
+
+        <div class="contenedor">
+        <label>Posición</label>
+        <input type="number" id="posicion">
+        <button id="buscarposicion">Buscar por posicion</button>
+
+    </div>
+
+    <div id="resultado"></div>
+
+    <script src="reto_10-11.js"></script>
+    
+</body>
+</html>

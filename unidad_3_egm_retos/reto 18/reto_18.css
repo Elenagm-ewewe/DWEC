@@ -1,0 +1,130 @@
+/* === ESTILOS GENERALES === */
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  margin: 0;
+  padding: 20px;
+}
+
+h3 {
+  color: #353b48;
+  border-bottom: 2px solid #487eb0;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* === CONTENEDORES DE FORMULARIOS === */
+div {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  max-width: 450px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdde1;
+  margin-top: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #487eb0;
+  outline: none;
+}
+
+/* === BOTONES === */
+button {
+  background-color: #487eb0;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #40739e;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button + button {
+  margin-left: 5px;
+}
+
+/* === BOTONES SECUNDARIOS (ver listas) === */
+#verbibliotecas, #versocios, #verlibros {
+  background-color: #718093;
+}
+
+/* === RESULTADOS === */
+#resultado {
+  margin-top: 25px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 700px;
+}
+
+#resultado div {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 4px solid #487eb0;
+}
+
+.biblioteca-item strong,
+.libro-item strong,
+.socio-item strong {
+  color: #273c75;
+}
+
+
+.editar-biblio, .editar-libro, .editar-socio {
+  background-color: #44bd32;
+}
+
+.borrar-biblio, .borrar-libro, .borrar-socio {
+  background-color: #e84118;
+}
+
+.editar-biblio:hover, .editar-libro:hover, .editar-socio:hover {
+  background-color: #4cd137;
+}
+
+.borrar-biblio:hover, .borrar-libro:hover, .borrar-socio:hover {
+  background-color: #c23616;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  div, #resultado {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up de Colores</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 15px; 
+            text-align: center;
+        }
+        .color-buttons button { 
+            margin: 5px; 
+            padding: 8px 12px; 
+            cursor: pointer;
+        }
+        .controls { 
+            margin-top: 20px; 
+            padding-top: 10px; 
+            border-top: 1px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Controles de Pop-up</h2>
+
+    <div class="color-buttons">
+        <button onclick="enviarColor('red')">Rojo</button>
+        <button onclick="enviarColor('green')">Verde</button>
+        <button onclick="enviarColor('blue')">Azul</button>
+        <button onclick="enviarColor('yellow')">Amarillo</button>
+        <button onclick="enviarColor('purple')">Púrpura</button>
+        <button onclick="enviarColor('orange')">Naranja</button>
+    </div>
+
+    <div class="controls">
+        
+        <p>
+            Mover a posición (ej: **100,50**):
+            <input type="text" id="posInput" placeholder="arriba,izquierda" value="50,50">
+            <button onclick="moverVentana()">Mover Ventana</button>
+        </p>
+
+        <button onclick="window.close()">Cerrar Pop-up</button>
+
+    </div>
+
+    <script>
+
+        const principalWindow = window.opener;
+
+
+        function enviarColor(color) {
+            if (principalWindow && !principalWindow.closed) {
+                const resultadoDiv = principalWindow.document.getElementById('resultado');
+                
+                // Crea un nuevo párrafo
+                const nuevoParrafo = principalWindow.document.createElement('p');
+                nuevoParrafo.textContent = `Párrafo impreso con color ${color}.`;
+                nuevoParrafo.style.color = color;
+                nuevoParrafo.style.fontWeight = 'bold';
+                
+                // Lo añade al contenedor de resultados
+                resultadoDiv.appendChild(nuevoParrafo);
+            } else {
+                alert("La ventana principal está cerrada.");
+            }
+        }
+
+
+        function moverVentana() {
+            const posValue = document.getElementById('posInput').value;
+            const partes = posValue.split(',').map(s => s.trim());
+            
+            if (partes.length === 2 && !isNaN(partes[0]) && !isNaN(partes[1])) {
+                const top = parseInt(partes[0]);
+                const left = parseInt(partes[1]);
+                
+                // Usa window.moveTo(x, y) para cambiar la posición
+                window.moveTo(left, top); 
+                console.log(`Ventana movida a Top: ${top}, Left: ${left}`);
+            } else {
+                alert("Por favor, introduce dos números válidos separados por coma (ej: 100,200).");
+            }
+        }
+    </script>
+</body>
+</html>

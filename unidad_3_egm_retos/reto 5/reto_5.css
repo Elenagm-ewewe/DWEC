@@ -1,0 +1,63 @@
+/* --- Estilos generales --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2em;
+}
+
+/* --- Contenedor de botones --- */
+div:first-of-type {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+
+/* --- Botones --- */
+button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* --- Resultado --- */
+#resultado {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* --- Números o texto destacado --- */
+#resultado p, #resultado strong {
+  font-size: 1.2rem;
+}
+
+strong {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.2em 0.8em;
+  border-radius: 15px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reto 16. Unidad 3</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .section { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        .section h3 { margin-top: 0; }
+        input, select, button { margin-bottom: 10px; padding: 8px; display: block; width: 90%; }
+        button { cursor: pointer; background-color: #4CAF50; color: white; border: none; }
+        #resultado { margin-top: 20px; border-top: 2px dashed #333; padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestión de Datos Escolares</h1>
+
+    <div class="section">
+        <h3>1. Crear Escuela</h3>
+        <input type="text" id="nombreEscuela" placeholder="Nombre de la Escuela" required>
+        <input type="text" id="localidadEscuela" placeholder="Localidad">
+        <input type="text" id="responsableEscuela" placeholder="Responsable">
+        <button id="btnCrearEscuela">Crear Escuela</button>
+    </div>
+
+    <div class="section">
+        <h3>2. Añadir Profesor</h3>
+        <select id="selectEscuelaProfesor" required>
+            <option value="">-- Seleccionar Escuela --</option>
+        </select>
+        <input type="text" id="nombreProfesor" placeholder="Nombre del Profesor" required>
+        <label for="tipoProfesor">Tipo:</label>
+        <select id="tipoProfesor">
+            <option value="ciencias">Ciencias</option>
+            <option value="letras">Letras</option>
+        </select>
+        <button id="btnCrearProfesor">Añadir Profesor</button>
+    </div>
+
+    <div class="section">
+        <h3>3. Añadir Alumno</h3>
+        <select id="selectEscuelaAlumno" required>
+            <option value="">-- Seleccionar Escuela --</option>
+        </select>
+        <input type="text" id="nombreAlumno" placeholder="Nombre del Alumno" required>
+        <input type="text" id="cursoAlumno" placeholder="Curso (Ej: 1º ESO)">
+        <label for="selectProfesorAlumno">Profesor Responsable:</label>
+        <select id="selectProfesorAlumno">
+            <option value="">-- Seleccionar Profesor --</option>
+        </select>
+        <button id="btnCrearAlumno">Añadir Alumno</button>
+    </div>
+    
+    <hr>
+
+    <button id="btnVerDatos" style="background-color: #333; width: 100%;">Visualizar Todos los Datos</button>
+
+    <div id="resultado"></div>
+
+    <script src="reto_16.js"></script>
+</body>
+</html>

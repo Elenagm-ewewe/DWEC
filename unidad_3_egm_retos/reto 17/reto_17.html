@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto 17. Unidad 3</title>
+  <link rel="stylesheet" href="reto_17.css">
+</head>
+<body>
+
+  <h1>Gestión de Tanques y Habitantes</h1>
+
+  <section id="localidades">
+    <h2>Localidades</h2>
+    <label>Nombre:</label>
+    <input type="text" id="nombreLocalidad">
+    <label>Número de habitantes:</label>
+    <input type="number" id="numHabitantes">
+    <label>Provincia:</label>
+    <input type="text" id="provincia">
+    <button id="crearLocalidad">Crear Localidad</button>
+  </section>
+
+  <section id="tanques">
+    <h2>Tanques</h2>
+    <label>Número:</label>
+    <input type="number" id="numTanque">
+    <label>Capacidad (litros):</label>
+    <input type="number" id="capacidad">
+    <label>Localidad:</label>
+    <select id="localidadTanque"></select>
+    <button id="crearTanque">Crear Tanque</button>
+  </section>
+
+  <section id="habitantes">
+    <h2>Habitantes</h2>
+    <label>Nombre:</label>
+    <input type="text" id="nombreHabitante">
+    <label>Edad:</label>
+    <input type="number" id="edadHabitante">
+    <label>Localidad:</label>
+    <select id="localidadHabitante"></select>
+    <label>Tanque asignado:</label>
+    <select id="tanqueHabitante"></select>
+    <button id="crearHabitante">Crear Habitante</button>
+  </section>
+
+  <section id="acciones">
+    <h2>Listados</h2>
+    <button id="verLocalidades">Ver Localidades</button>
+    <button id="verTanques">Ver Tanques</button>
+    <button id="verHabitantes">Ver Habitantes</button>
+  </section>
+
+  <div id="resultado"></div>
+
+  <script src="reto_17.js"></script>
+</body>
+</html>

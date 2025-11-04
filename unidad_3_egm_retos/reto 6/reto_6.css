@@ -1,0 +1,56 @@
+/* ----- Estilos generales ----- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2em;
+}
+
+/* ----- Título ----- */
+h2 {
+    text-align: center;
+    color: #0d47a1;
+    background-color: #bbdefb;
+    padding: 1em 2em;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2em;
+    font-size: 1.3rem;
+}
+
+/* ----- Contenedor de resultados ----- */
+#resultado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1em;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ----- Cada tarjeta de fecha ----- */
+.fecha {
+    background-color: #1976d2;
+    color: white;
+    padding: 1em;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.fecha:hover {
+    background-color: #1565c0;
+    transform: scale(1.05);
+}
+
+.fecha p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}

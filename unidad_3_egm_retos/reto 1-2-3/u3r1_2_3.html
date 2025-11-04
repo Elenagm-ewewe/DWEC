@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1. Unidad 3</title>
+</head>
+<body>
+
+    <style>
+        /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centrar todo el contenido */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f5f6fa;
+    color: #333;
+}
+
+/* Estilos del input y botón */
+input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-right: 8px;
+    margin-bottom: 1em;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Resultados */
+#resultado, #usuario, #tamaño, #vocales{
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+
+strong {
+    margin-top: 15px;
+    display: block;
+}
+</style>
+
+    <input type="text" id="entrada" required>
+    <button id="crear">Crear usuario</button>
+
+    <strong>Datos:</strong>
+    <div id="resultado"></div>
+    <strong>Nombre de usuario:</strong>
+    <div id="usuario"></div>
+
+    <strong>Tamaño:</strong>
+    <div id="tamaño"></div>
+
+    <strong>Número de vocales</strong>
+    <div id="vocales"></div>
+
+
+    
+    <script src="u3r1_2_3.js"></script>
+</body>
+</html>
