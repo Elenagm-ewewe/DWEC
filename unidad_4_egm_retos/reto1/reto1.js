@@ -62,12 +62,13 @@ function girarCarta(event) {
                 primeraCarta = null;
                 segundaCarta = null;
 
-            }, 1000);
+            }, 1500);
         }
     }
 
     if(aciertos ===4){
         document.getElementById("ganaste").innerHTML = `Has ganado`;
+        document.getElementById("volverajugar").innerHTML = `<button onclick="location.reload()">Volver a jugar</button>`;
     }
 
 }

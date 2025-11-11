@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de cartas</title>
+
+    <style>
+        img{
+            border-radius: 10px;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .intentos{
+            padding: 1em;
+            background-color: rgb(179, 221, 207);
+            border-radius: 10px;
+        }
+
+        .aciertos{
+            padding: 1em;
+            background-color: rgb(100, 221, 127);
+            border-radius: 10px;
+        }
+
+        #ganaste{
+            color: rgb(23, 148, 6);
+            width: auto;
+            font-size: 3em;
+        }
+
+        button{
+            background-color: rgb(173, 157, 157);
+            color: white;
+            padding: 0.5em;
+        }
+
+    </style>
+
 </head>
 <body>
     
@@ -16,11 +49,12 @@
     <img id="6" src="fotos/none.jpg"></img>
     <img id="7" src="fotos/none.jpg"></img>
 
-    <p>Número de aciertos: <strong id="aciertos">0</strong></p>
-    <p>Número de intentos: <strong id="intentos">0</strong></p>
+    <p class="aciertos">Número de aciertos: <strong id="aciertos">0</strong></p>
+    <p class="intentos">Número de intentos: <strong id="intentos">0</strong></p>
 
     <h3 id="ganaste"></h3>
 
     <script src="reto1.js"></script>
+    <div id="volverajugar"></div>
 </body>
 </html>
