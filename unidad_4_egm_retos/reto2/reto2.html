@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form nonvalidate>
+    <label>Indentificador:</label>
+    <input type="text" id="identificador" pattern="[a-zA-Z]\d{8}[a-zA-Z]">
+    <br>
+    <label>Nombre y Apellidos</label>
+    <input type="text" id="nombre" pattern="">
+    <br>
+    <label>Fecha de nacimiento</label>
+    <input type="text" id="fecha" pattern="\d{2}/\d{2}/\d{4}">
+    <br>
+    <label>Correo electronico:</label>
+    <input type="text" id="correo">
+    <br>
+    <label>Edad</label>
+    <input type="text" id="edad">
+    <br>
+    <label>Club de ski</label>
+    <input type="checkbox" id="ski">
+    <br>
+
+    <button type="submit">Enviar formulario</button>
+
+</form>
+
+
+<script src="reto2.js" id="enviar"></script>
+
+</body>
+</html>
